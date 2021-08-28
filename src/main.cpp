@@ -32,7 +32,13 @@ SPIClass SPI_3(PC12, PC11, PC10);
 WiFiClass WiFi(&SPI_3, PE0, PE1, PE8, PB13);
 WiFiClient client;
 
-// PASTE HERE
+char ssid[] = "abidev";      // your network SSID (name)
+char pass[] = "";            // your network password
+int status = WL_IDLE_STATUS; // the Wifi radio's status
+
+const char *server = "api.thingspeak.com";
+unsigned long myChannelNumber = ;
+String my_Api_key = "";
 
 // function declaration
 void printWifiData();
